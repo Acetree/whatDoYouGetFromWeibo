@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+
+    "name": "你从微博收获了什么？",
+    "description": "每天在微博看了那么多信息，记录下这些信息流在你心里留下了什么吧！",
+    "version": "1.2",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "http://www.weibo.com/*"
+    ],
+    "content_scripts": [{
+        "matches": ["http://www.weibo.com/*"],
+        "css": ["weibo.css"],
+        "js": ["jquery-1.11.1.min.js","weibo.js"]
+    }]
+
+}
